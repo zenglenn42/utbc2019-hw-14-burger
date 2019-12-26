@@ -1,7 +1,7 @@
 class Controller {
     constructor() {
         console.log("executing constructor")
-        //   this.delegate(document, "submit", ".create-form", this.createQuote.bind(this));
+        this.delegate(document, "submit", ".create-div", this.createBurger.bind(this));
         //   this.delegate(document, "click", ".delquote", this.deleteQuote.bind(this));
         //   this.delegate(document, "submit", ".update-form", this.updateQuote.bind(this));
     }
@@ -18,4 +18,9 @@ class Controller {
           }
       });
     };
+
+    createBurger(event) {
+      event.preventDefault();
+      console.log("click");
+    }
 }
