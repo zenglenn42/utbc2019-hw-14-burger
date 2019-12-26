@@ -13,4 +13,5 @@
 .left-div,
 .right-div {
     background-color: lightgray;
+    min-width: 48%;
 }
