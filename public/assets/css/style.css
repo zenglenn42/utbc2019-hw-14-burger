@@ -1,0 +1,16 @@
+.create-div {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.left-right-div {
+    display: flex;
+    flex-direction: row;
+    min-width: 100vw;
+    justify-content: space-around;
+}
+
+.left-div,
+.right-div {
+    background-color: lightgray;
+}
