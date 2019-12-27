@@ -1,3 +1,7 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .create-div {
     margin: 0 auto;
     text-align: center;
@@ -19,6 +23,7 @@
     overflow: scroll;
     padding-bottom: 1em;
     padding-top: 0.5em;
+    border-radius: 0.25em;
 }
 
 input[type="text"] {
