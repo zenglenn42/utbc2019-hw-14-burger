@@ -21,6 +21,38 @@ class Controller {
 
     createBurger(event) {
       event.preventDefault();
-      console.log("click");
+  
+      const newBurger = {
+        'burger': document.querySelector("#new-burger").value.trim()
+      }
+  
+      const postConfig = {
+        method: 'post',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newBurger)
+      }
+  
+      fetch("/api/burger", postConfig)
+        .then(response => {
+          if (response.ok) {
+            return response.json()
+          } else {
+            return Promise.reject({
+                status: response.status,
+                statusText: response.statusText
+            })
+          }
+        })
+        .then(jsObj => {
+          location.reload();
+          console.log("jsObj = ", jsObj);
+        })
+        .catch(error => {
+          console.log("Error status:", error.status);
+          console.log("Error text:", statusText);
+        }
+      );
     }
 }
