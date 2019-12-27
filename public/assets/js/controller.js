@@ -23,7 +23,8 @@ class Controller {
       event.preventDefault();
   
       const newBurger = {
-        'burger': document.querySelector("#new-burger").value.trim()
+        'burger': document.querySelector("#new-burger").value.trim(),
+        'devoured': false
       }
   
       const postConfig = {

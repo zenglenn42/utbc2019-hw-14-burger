@@ -1,5 +1,6 @@
 let express = require("express");
 let exphbs = require("express-handlebars");
+let burgers = require("./models/burger.js");
 
 let app = express();
 let PORT = process.env.PORT || 8080;
@@ -17,7 +18,12 @@ app.get("/", (req, res) => {
 
 app.post("/api/burger", (req, res) => {
     let burger = req.body.burger;
+    let devoured = req.body.devoured;
     console.log("burger = ", burger);
+    burgers.create(["burger", "devoured"], [burger, devoured], (result) => {
+        // Send back the ID of the new quote
+        res.json({ id: result.insertId });
+    });
 })
 
 app.listen(PORT, function() {
