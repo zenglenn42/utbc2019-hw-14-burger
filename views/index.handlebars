@@ -12,13 +12,17 @@
   <div class="left-right-div">
     <div class="left-div">
       <form id="devour">
-        <input type="text" disabled value="a burger"></input>
-        <button data-id="1" class="devour-button" type="submit">Devour</button>
+        {{#each toDevour}}
+        <input type="text" disabled value="{{this.burger}}"></input>
+        <button data-id="{{this.id}}" class="devour-button" type="submit">Devour</button>
+        {{/each}}
       </form>
     </div>
     <div class="right-div">
         <form id="devour">
-        <input type="text" disabled value="a devoured burger"></input>
+          {{#each devoured}}
+          <input type="text" disabled value="{{this.burger}}"></input>
+          {{/each}}
       </form>
     </div>
   </div>

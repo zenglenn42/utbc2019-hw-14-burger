@@ -13,7 +13,21 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 app.get("/", (req, res) => {
-    res.render("index", {});
+    let condition = "devoured = false";
+    let renderObj = {};
+    burgers.selectWhere(condition, (result) => {
+        if (result.length > 0) {
+            renderObj.toDevour = result;
+        }
+        condition = "devoured = true";
+        burgers.selectWhere(condition, (result) => {
+            if (result.length > 0) {
+                renderObj.devoured = result;
+            }
+            console.log("rendering: ", renderObj);
+            res.render("index", renderObj);
+        });
+    });
 });
 
 app.post("/api/burger", (req, res) => {
