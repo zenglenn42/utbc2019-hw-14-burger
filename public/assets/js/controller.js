@@ -38,6 +38,7 @@ class Controller {
       fetch("/api/burger", postConfig)
         .then(response => {
           if (response.ok) {
+            document.querySelector("#new-burger").value = "";
             return response.json()
           } else {
             return Promise.reject({

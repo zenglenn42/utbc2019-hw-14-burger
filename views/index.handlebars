@@ -4,26 +4,28 @@
     <h1>So many burgers, So little time</h1>
     <hr>
     <form>
-      <p>Name a burger you'd like to eat.</p>
+      <p>Describe a burger you'd like to eat.</p>
       <input type="text" id="new-burger" name="new-burger" placeholder="description" required></input>
       <button type="submit" id="submit-burger">Add</button>
     </form>
     <hr>
   <div class="left-right-div">
     <div class="left-div">
-      <form id="devour">
-        {{#each toDevour}}
-        <input type="text" disabled value="{{this.burger}}"></input>
-        <button data-id="{{this.id}}" class="devour-button" type="submit">Devour</button>
-        {{/each}}
-      </form>
+      To Devour
+      {{#each toDevour}}
+        <form id="devour">
+          <input type="text" disabled value="{{this.burger}}"></input>
+          <button data-id="{{this.id}}" class="devour-button" type="submit">Devour</button>
+        </form>
+      {{/each}}
     </div>
     <div class="right-div">
-        <form id="devour">
-          {{#each devoured}}
-          <input type="text" disabled value="{{this.burger}}"></input>
-          {{/each}}
+      Devoured
+      {{#each devoured}}
+      <form id="devour">
+        <input type="text" disabled value="{{this.burger}}"></input>
       </form>
+      {{/each}}
     </div>
   </div>
 </main>
