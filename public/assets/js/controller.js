@@ -2,7 +2,7 @@ class Controller {
     constructor() {
         console.log("executing constructor")
         this.delegate(document, "submit", ".create-div", this.createBurger.bind(this));
-        //   this.delegate(document, "click", ".delquote", this.deleteQuote.bind(this));
+        this.delegate(document, "click", ".devour-button", this.devourBurger.bind(this));
         //   this.delegate(document, "submit", ".update-form", this.updateQuote.bind(this));
     }
   
@@ -56,4 +56,45 @@ class Controller {
         }
       );
     }
+
+    devourBurger(event) {
+      event.preventDefault();
+      const devourButtonEl = event.target;
+      const burgerId = devourButtonEl.getAttribute("data-id");
+      console.log("burgerId = ", burgerId);
+
+      const devourBurger = {
+        'id': burgerId,
+        'devoured': true
+      }
+
+      const putConfig = {
+        method: 'put',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(devourBurger)
+      }
+
+      fetch(`/api/burger/devour/${burgerId}`, putConfig)
+      .then(response => {
+        if (response.ok) {
+          return response.json()
+        } else {
+          return Promise.reject({
+              status: response.status,
+              statusText: response.statusText
+          })
+        }
+      })
+      .then(jsObj => {
+        console.log("jsObj = ", jsObj);
+        location.reload();
+      })
+      .catch(error => {
+        console.log("Error status:", error.status);
+        console.log("Error text:", statusText);
+      }
+    );
+  }
 }

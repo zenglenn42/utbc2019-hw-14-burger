@@ -24,7 +24,20 @@ app.post("/api/burger", (req, res) => {
         // Send back the ID of the new quote
         res.json({ id: result.insertId });
     });
-})
+});
+
+app.put("/api/burger/devour/:id", (req, res) => {
+    let burgerId = req.params.id;
+    console.log("devour:", burgerId, )
+    let condition = "id = " + burgerId;
+    burgers.update({devoured: true}, condition, (result) => {
+        if (result.changedRows === 0) {
+            return res.status(404).end();
+        }
+        res.json({id: burgerId})
+        //res.status(200).end();
+    })
+});
 
 app.listen(PORT, function() {
     console.log("Server listening on: http://localhost:" + PORT);
