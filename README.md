@@ -1,6 +1,9 @@
 # utbc2019-hw-14-burger
 
-### Your personal burger consumption manager has arrived.
+![alt](docs/ilya-mashkov-_qxbJUr9RqI-unsplash.jpg)
+##### Image courtesy Ilya Mashkov, Unsplash.com
+
+## Your personal burger consumption manager has arrived.
 
 ![alt](docs/mvp-2.0-ui.png)
 
