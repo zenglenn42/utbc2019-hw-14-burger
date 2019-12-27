@@ -33,7 +33,7 @@ This simple, fullstack web application illustrates several classic web developme
     
     Organize server-side components in this classic form that facilitates development and maintenance through a separation of concerns.
 
-    ## Technology Stack
+## Technology Stack
 
     * Frontend
         * HTML, CSS (flex box)
