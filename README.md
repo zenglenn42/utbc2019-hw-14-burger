@@ -35,18 +35,18 @@ This simple, fullstack web application illustrates several classic web developme
 
 ## Technology Stack
 
-    * Frontend
-        * HTML, CSS (flex box)
-        * AJAX-based javascript controller
-            * Fetch, Promises
-    * Backend
-        * Node.js / Express.js server
-        * Persisted data via ORM-wrapped mysql database
-        * Middleware
-            * json body parsing
-            * Handlebars templates and HTML rendering
-        * Model View Controller decomposition
-            * model = database and related interface
-            * view = html templates
-            * controller = server side routes
-        * RESTful API
+* Frontend
+	* HTML, CSS (flex box)
+	* AJAX-based javascript controller
+		* Fetch, Promises
+* Backend
+	* Node.js / Express.js server
+	* Persisted data via ORM-wrapped mysql database
+	* Middleware
+		* json body parsing
+		* Handlebars templates and HTML rendering
+	* Model View Controller decomposition
+		* model = database and related interface
+		* view = html templates
+		* controller = server side routes
+	* RESTful API
