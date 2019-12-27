@@ -1,5 +1,7 @@
 # utbc2019-hw-14-burger
 
+![alt](docs/mvp-ui.png)
+
 Are you a burger-lover?
 Does the scale of that love cause a yearning for burger consumption management?
 
