@@ -111,3 +111,7 @@ Finally, most of the nice styling applied to our dynamically generated HTML is e
 ```
 public/assets/css/style.css
 ```
+
+It's the reason the user interface does look like this:
+
+![alt](docs/mvp-ui.png)
