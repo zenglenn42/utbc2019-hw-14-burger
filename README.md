@@ -80,7 +80,7 @@ With this project the directory structure looks like this:
 
 The [server.js](https://github.com/zenglenn42/utbc2019-hw-14-burger/blob/master/server.js) is self-explanatory ... it's our Node.js server that runs on some mystical server in the cloud (or possibly on localhost when we're in development mode.)
 
-The stuff under ./models relates to persisted data which drives the application.  In this case, it's our burger records stored in a mysql database and wrappered by a nice javascript-friendly object relational mapping (orm).  The schema for that data looks like this:
+The stuff under ./models relates to persisted data which drives the application.  In this case, it's our burger records stored in a mysql database and wrappered by a nice javascript-friendly object relational mapping ([orm](https://github.com/zenglenn42/utbc2019-hw-14-burger/blob/master/models/burger.js)).  The schema for that data looks like this:
 
 ```
 CREATE DATABASE burger_db;
@@ -94,9 +94,9 @@ CREATE TABLE burgers(
 );
 ```
 
-The files under ./views are the handlebars templates used to generate the on-the-fly HTML pushed to the client from the server.  Basically, you hydrate templates into full HTML by adding JSON and calling res.render().
+The files under ./views are the [handlebars templates](https://github.com/zenglenn42/utbc2019-hw-14-burger/blob/master/views/index.handlebars) used to generate the on-the-fly HTML pushed to the client from the server.  Basically, you hydrate templates into full HTML by adding JSON and calling res.render().
 
-The file under ./controllers is the server-side routing that implements our RESTful API that responds to client requests to fetch our lists, add a new burger, and devour a specific burger.
+The file under ./controllers is the [server-side routing](https://github.com/zenglenn42/utbc2019-hw-14-burger/blob/master/controllers/burgerController.js) that implements our RESTful API that responds to client requests to fetch our lists, add a new burger, and devour a specific burger.
 
 Under full disclosure, the controller concept also applies to some client-side code as well:
 
@@ -104,9 +104,9 @@ Under full disclosure, the controller concept also applies to some client-side c
 public/assets/js/controller.js
 ```
 
-This code registers click handlers and makes dynamic requests to the backend as users add and devour burgers.  Key features include calls to 'fetch' for asynchronous processing by the express server in response to user input.
+This [code](https://github.com/zenglenn42/utbc2019-hw-14-burger/blob/master/public/assets/js/controller.js) registers click handlers and makes dynamic requests to the backend as users add and devour burgers.  Key features include calls to 'fetch' for asynchronous processing by the express server in response to user input.
 
-Finally, most of the nice styling applied to our dynamically generated HTML is embodied in a single cascading style sheet (CSS):
+Finally, most of the nice styling applied to our dynamically generated HTML is embodied in a [single cascading style sheet](https://github.com/zenglenn42/utbc2019-hw-14-burger/blob/master/public/assets/css/style.css) (CSS):
 
 ```
 public/assets/css/style.css
