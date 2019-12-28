@@ -78,7 +78,7 @@ With this project the directory structure looks like this:
 	./public/assets/css/style.css
 ```
 
-The server.js is self-explanatory ... it's our Node.js server that runs on some mystical server in the cloud (or possibly on localhost when we're in development mode.)
+The [server.js](https://github.com/zenglenn42/utbc2019-hw-14-burger/blob/master/server.js) is self-explanatory ... it's our Node.js server that runs on some mystical server in the cloud (or possibly on localhost when we're in development mode.)
 
 The stuff under ./models relates to persisted data which drives the application.  In this case, it's our burger records stored in a mysql database and wrappered by a nice javascript-friendly object relational mapping (orm).  The schema for that data looks like this:
 
